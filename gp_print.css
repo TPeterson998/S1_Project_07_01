@@ -17,11 +17,35 @@
 
 
 /* Hidden Objects */
-
-
-
+/* This makes it imposible for you to see the nav, article, and footer when you print it */
+nav,
+footer,
+article {
+    display: none;
+}
 
 
 
 
 /* Comic Book Sheet Styles */
+/* This sets up the width and margin for the element with the id of sheet as well as the width for the classes size1, size3, size2, and size4 when it gets printed. */
+section#sheet {
+    width: 6in;
+    margin: 0 auto 0 auto;
+}
+
+.size1 {
+    width: 5in;
+}
+
+.size2 {
+    width: 3in;
+}
+
+.size3 {
+    width: 2in;
+}
+
+.size4 {
+    width: 1.5in;
+}

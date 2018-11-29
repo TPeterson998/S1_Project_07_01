@@ -22,6 +22,7 @@
 @import url("gp_designs.css");
 
 /* Flex Layout Styles */
+/* This sets up the entire body as a flex box, as a row that wraps so that the entire sheet can shrink and grow with the other items. This also sets up how much the initail size is, how much the groth rate is, and how much the shrink rate is for both the article and the element with the id of sheet. */
 body {
       flex-flow: row wrap;
       -webkit-flex-flow: row wrap;
@@ -41,10 +42,15 @@ article {
 	Mobile Devices: 0 - 480 pixels
    ============================================
 */
+
+/* This set up the mobile design. It puts the footer at the bottom with the nav list right above that as well as makeing all elements with the class panel take up the entire width of the screen. */
 @media only screen and (max-width: 480px) {
+      .horizontal {
+            order: 99;
+      }
+
       .panel {
             width: 100%;
-            order: 99;
       }
 
       body>footer {
@@ -57,7 +63,7 @@ article {
 	Tablet and Desktop Devices: Greater than 480 pixels
    ===================================================
 */
-
+/* This sets up the horizontal nav list in desktop or tablet. It makes the nav a flex box in a row with out wraping and it sets the growth and shrink rate to 1 with the intial size as auto. This also sets up the width for the elements in the classes size1, size2, size3, and size4*/
 @media only screen and (min-width: 481px) {
       .horizontal ul {
             flex-flow: row nowrap;
@@ -69,5 +75,21 @@ article {
 
       .horizontal ul li {
             flex: 1 1 auto;
+      }
+
+      .size1 {
+            width: 100%
+      }
+
+      .size2 {
+            width: 60%;
+      }
+
+      .size3 {
+            width: 40%;
+      }
+
+      .size4 {
+            width: 30%;
       }
 }
